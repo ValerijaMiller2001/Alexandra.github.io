@@ -1,0 +1,138 @@
+@media (max-width: 1439px) {
+    .sidepanel {
+        display: none;
+    }
+}
+
+@media (max-width: 1200px) {
+    .container {
+        max-width: 960px;
+    }
+
+    .promo {
+        &_title, &_subtitle, &_btns {
+            margin-left: 0;
+        }
+    }
+
+    .about {
+        &_wrapper {
+            grid-template: minmax(245px, auto) minmax(255px, auto) / 400px 520px;
+            column-gap: 40px;
+        }
+        &_skills { 
+            grid-template: repeat(2, minmax(115px, auto)) / repeat(2, 250px);
+            column-gap: 20px;
+            &-item {
+                grid-template-columns: 40px 195px;
+                column-gap: 15px;
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        max-width: 720px;
+    }
+
+    .about {
+        &_wrapper {
+            grid-template: minmax(245px, auto) minmax(255px, auto) / 300px 380px;
+        }
+
+        &_skills {
+            grid-template: repeat(3, auto) / 380px;
+            grid-auto-rows: minmax(115px, auto);
+            &-item {
+                grid-template-columns: 40px 320px;
+                column-gap: 20px;
+            }
+        }
+    }
+
+    .subtitle {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 540px;
+    }
+
+    .promo {
+        background: url('../img/main/Background.jpeg') no-repeat 57%/cover;
+        &_title {
+            width: 300px;
+            font-size: 30px;
+            line-height: 39px;
+        }
+    }
+
+    .about {
+        padding-top: 40px;
+        &_wrapper {
+            grid-template: 400px auto auto / 1fr;
+        }
+        &_photo {
+            grid-row: 1 / 2;
+        }
+        &_skills {
+            grid-template: repeat(2, auto) / repeat(2, 260px);
+            &-item {
+                grid-template-columns: 40px 200px;
+                column-gap: 20px;
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .promo {
+        background: url('../img/main/Background.jpeg') no-repeat 60%/cover;
+        &_title {
+            font-size: 26px;
+            line-height: 39px;
+        }
+        &_btn {
+            margin-right: 44px;
+        }
+        &_btns {margin-top: 30px;}
+    }
+
+    .hamburger {
+        right: 20px;
+    }
+
+    .menu {
+        &_block {
+            width: 250px;
+            padding-left: 20px;
+        }
+    }
+
+    .subtitle {
+        font-size: 24px;
+    }
+
+    .about {
+        &_wrapper {
+            grid-template: 400px auto auto / 1fr;
+            column-gap: 20px;
+        }
+        &_skills {
+            grid-template: repeat(2, auto) / 1fr;
+            justify-content: center;
+            &-item {
+                grid-template-columns: 40px 1fr;
+                column-gap: 20px;
+            }
+        }
+    }
+}

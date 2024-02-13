@@ -181,7 +181,6 @@
 }
 
 .about {
-    min-height: 840px;
     padding-top: 120px;
     &_wrapper {
         display: grid;
@@ -194,6 +193,8 @@
         grid-row: 1/3;
         img {
             width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
     }
     &_text {
@@ -220,7 +221,7 @@
     &_skills {
         display: grid;
         grid-template: repeat(2, minmax(115px, auto)) / repeat(2, 260px);
-        grid-auto-rows: repeat(2, 1fr);
+        grid-auto-rows: repeat(2, minmax(115px, auto));
         row-gap: 20px;
         column-gap: 50px;
         &-item {
@@ -482,6 +483,7 @@
         img {
             width: 100%;
             height: 100%;
+            object-fit: cover;
         }
         &:hover {
             transform: scale(1.04);
@@ -561,6 +563,8 @@
     }
     &_photo {
         width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
     &_title {
         margin-top: 10px;
