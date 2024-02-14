@@ -29,6 +29,52 @@
             }
         }
     }
+
+    .resume {
+        &_wrapper {
+            padding: 60px 0 0;
+            column-gap: 110px;
+        }
+    }
+
+    .skills {
+        &_wrapper {
+            grid-template: repeat(2,270px)/ repeat(auto-fit, 270px);
+            justify-content: center;
+            gap: 10px;
+        }
+    }
+
+    .progress {
+        &_wrapper {
+            grid-template: repeat(2,minmax(70px,auto))/repeat(2,350px);
+            justify-content: center;
+        }
+    }
+
+    .portfolio {
+        &_wrapper {
+            grid-template: repeat(2, 280px) / repeat(auto-fit, 280px);
+            grid-auto-rows: 280px;
+            justify-content: center;
+            .vertical, .horizonal {
+                grid-row: unset;
+                grid-column: unset;
+            }
+        }
+    }
+
+    .contacts {
+        &_wrapper {
+            padding: 0;
+            column-gap: 30px; 
+            grid-template-columns: 400px 530px;
+        }
+
+        &_form {
+            grid-template: 45px 190px 45px / repeat(2, 250px);
+        }
+    }
 }
 
 @media (max-width: 992px) {
@@ -54,6 +100,58 @@
     .subtitle {
         font-size: 30px;
     }
+
+    .resume {
+        &_wrapper {
+            grid-template-columns: repeat(2,350px);
+            column-gap: 10px;
+        }
+    }
+
+    .progress {
+        &_wrapper {
+            column-gap: 30px;
+            grid-template: repeat(2, minmax(70px, auto)) / repeat(2, 300px);
+        }
+        &_item {
+            &-line {
+                width: 300px;
+            }
+        }
+    }
+
+    .price {
+        &_wrapper {
+            padding: 62px 0 0;
+            grid-template-columns: repeat(2, 345px);
+            ul {
+                width: 340px;
+            }
+        }
+    }
+
+    .contacts {
+        &_wrapper {
+            grid-template-columns: 300px 400px;
+        }
+
+        &_form {
+            grid-template: 45px 100px 45px / repeat(2, 190px);
+            row-gap: 20px;
+        }
+        &_btn {
+            padding: 8px 25px;
+            line-height: 16px;
+        }
+        &_photo {
+            img {
+                display: block;
+                width: 300px;
+                height: 100%;
+            }
+        }
+    }
+
 }
 
 @media (max-width: 768px) {
@@ -86,12 +184,75 @@
             }
         }
     }
+
+    .resume {
+        padding-top: 40px;
+        &_wrapper {
+            padding: 40px 0 0;
+            grid-template-columns: 1fr;
+            row-gap: 20px;
+        }
+    }
+
+    .skills {
+        padding-top: 40px;
+        &_wrapper {
+            padding-top: 40px;
+            grid-template: repeat(2,270px)/repeat(2,270px);
+        }
+    }
+
+    .progress {
+        padding-top: 40px;
+        &_wrapper {
+            column-gap: 30px;
+            grid-template: repeat(2, minmax(70px, auto)) / repeat(2, 250px);
+        }
+        &_item {
+            &-line {
+                width: 250px;
+            }
+        }
+    }
+
+    .portfolio {
+        padding-top: 40px;
+        &_wrapper {
+            grid-template: repeat(2, 280px) / repeat(2, 280px);
+            margin-top: 40px;
+        }
+    }
+
+    .price {
+        padding-top: 40px;
+        &_wrapper {
+            padding: 40px 0 0;
+            grid-template-columns: 370px;
+            justify-content: center;
+            grid-template-rows: repeat(2, minmax(200px, auto));
+            grid-auto-rows: minmax(200px, auto);
+        }
+    }
+
+
+    .contacts {
+        padding: 40px 0;
+        &_photo {
+            display: none;
+        }
+        &_wrapper {
+            grid-template-columns: 1fr;
+        }
+        &_form {
+            grid-template: 45px 190px 45px / repeat(2, 250px);
+        }
+    }
 }
 
 @media (max-width: 576px) {
     .container {
         width: 100%;
-        padding: 0 10px;
+        padding: 0 15px;
     }
 
     .promo {
@@ -135,4 +296,70 @@
             }
         }
     }
+
+    .skills {
+        &_wrapper {
+            grid-template: repeat(2,270px)/ 270px;
+        }
+    }
+
+    .progress {
+        &_wrapper {
+            grid-template: repeat(2,minmax(70px,auto)) / 300px;
+        }
+        &_item {
+            &-line {
+                width: 300px;
+            }
+        }
+    }
+
+    .portfolio {
+        &_wrapper {
+            grid-template: repeat(2, 280px) / 280px;
+        }
+    }
+
+    .price {
+        &_wrapper {
+            grid-template-columns: 315px;
+            ul {
+                width: 300px;
+            }
+        }
+    }
+
+    .contacts {
+        &_form {
+            grid-template: 45px 190px 45px 45px / 1fr;
+        }
+    }
+
+    .contacts {
+        padding-bottom: 50px;
+        &_form {
+            grid-template: 45px 45px 190px minmax(45px, auto) / 1fr;
+        }
+        &_textarea {
+            grid-column: unset;
+            width: 100%;
+        }
+        &_triggers {
+            grid-column: unset;
+            grid-template-columns: 1fr;
+            column-gap: unset;
+            row-gap: 20px;
+        }
+        &_btn {
+            order: 2;
+            max-width: 220px;
+            margin: 0 auto;
+        }
+        &_policy {
+            width: 180px;
+            margin: 0 auto;
+            line-height: 18px;
+        }
+    }
+
 }

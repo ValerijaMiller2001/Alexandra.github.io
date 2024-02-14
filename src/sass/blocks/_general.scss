@@ -406,6 +406,7 @@
     &_wrapper {
         display: grid;
         grid-template: repeat(2, minmax(70px, auto)) / repeat(3, 350px);
+        grid-auto-rows: minmax(70px, auto);
         column-gap: 45px;
         row-gap: 30px;
     }
@@ -511,11 +512,13 @@
         padding: 62px 35px 0 52px;
         ul {
             width: 368px;
+            margin: 0;
             li {
                 list-style-type: none;
                 margin-top: 20px;
                 display: grid;
-                grid-template: minmax(21px, auto) 18px / repeat(2, auto);
+                grid-template: minmax(21px, auto) auto / repeat(2, auto);
+                grid-auto-rows: minmax(21px, auto);
                 row-gap: 5px;
                 justify-content: space-between;
             }
@@ -561,6 +564,7 @@
         column-gap: 68px;
         padding: 0 35px 0 52px;
     }
+
     &_photo {
         width: 100%;
         height: 100%;
@@ -599,8 +603,9 @@
         margin-top: 30px;
         display: grid;
         grid-template: 45px 190px 45px / repeat(2, 280px);
+        column-gap: 25px;
         row-gap: 30px;
-        justify-content: space-between;
+        justify-content: center;
         label {
             display: block;
             position: absolute;
