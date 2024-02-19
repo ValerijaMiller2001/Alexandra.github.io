@@ -141,7 +141,6 @@
         }
         &_btn {
             padding: 8px 25px;
-            line-height: 16px;
         }
         &_photo {
             img {
@@ -252,12 +251,13 @@
 @media (max-width: 576px) {
     .container {
         width: 100%;
-        padding: 0 15px;
+        padding: 0 10px;
     }
 
     .promo {
         background: url('../img/main/Background.jpeg') no-repeat 60%/cover;
         &_title {
+            width: 293px;
             font-size: 26px;
             line-height: 39px;
         }
@@ -322,18 +322,13 @@
 
     .price {
         &_wrapper {
-            grid-template-columns: 315px;
+            grid-template-columns: 300px;
             ul {
-                width: 300px;
+                width: 295px;
             }
         }
     }
 
-    .contacts {
-        &_form {
-            grid-template: 45px 190px 45px 45px / 1fr;
-        }
-    }
 
     .contacts {
         padding-bottom: 50px;
